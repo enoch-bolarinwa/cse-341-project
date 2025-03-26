@@ -1,3 +1,16 @@
+// Load environment variables from .env file
+require('dotenv').config();
+
+// Now you can access environment variables anywhere in your code
+const dbHost = process.env.DB_HOST;
+const dbUser = process.env.DB_USER;
+
+console.log(`Connecting to database at ${dbHost} with user ${dbUser}`);
+
+// Your other application code follows
+// For example, setting up your server, routes, etc.
+
+
 const express = require('express');
 const mongodb = require('./data/database')
 const app = express();
